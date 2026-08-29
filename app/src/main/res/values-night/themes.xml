@@ -3,5 +3,10 @@
     <style name="Base.Theme.RecipesApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="android:statusBarColor">@color/dark_theme_status_bar_background</item>
+        <item name="android:navigationBarColor">@color/dark_theme_navigation_bar_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="colorSurface">@color/dark_theme_surface_background</item>
     </style>
 </resources>

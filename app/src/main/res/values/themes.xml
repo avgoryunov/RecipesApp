@@ -1,8 +1,13 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.RecipesApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/light_theme_status_bar_background</item>
+        <item name="android:navigationBarColor">@color/light_theme_navigation_bar_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="colorSurface">@color/light_theme_surface_background</item>
     </style>
 
     <style name="Theme.RecipesApp" parent="Base.Theme.RecipesApp" />
