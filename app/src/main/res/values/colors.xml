@@ -2,4 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="launcher_icon_background">#F4FAFF</color>
+    <color name="light_theme_surface_background">#F4FAFF</color>
+    <color name="light_theme_status_bar_background">#F4FAFF</color>
+    <color name="light_theme_navigation_bar_background">#F5F5F5</color>
+    <color name="dark_theme_surface_background">#1E1E24</color>
+    <color name="dark_theme_status_bar_background">#1E1E24</color>
+    <color name="dark_theme_navigation_bar_background">#2A2A32</color>
+    <color name="button_categories_background">#525DC0</color>
+    <color name="button_favourites_background">#E13E3E</color>
 </resources>
