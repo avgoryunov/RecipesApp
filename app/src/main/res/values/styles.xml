@@ -14,5 +14,12 @@
         <item name="android:textAppearance">@style/StyleTitle14</item>
         <item name="cornerRadius">8dp</item>
     </style>
+    
+    <style name="StyleHeader20" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/montserrat_alternates_semi_bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/header</item>
+    </style>
 
 </resources>
