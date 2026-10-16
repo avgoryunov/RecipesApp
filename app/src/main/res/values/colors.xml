@@ -11,4 +11,5 @@
     <color name="dark_theme_navigation_bar_background">#2A2A32</color>
     <color name="button_categories_background">#525DC0</color>
     <color name="button_favourites_background">#E13E3E</color>
+    <color name="header">#5F3678</color>
 </resources>
