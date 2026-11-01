@@ -23,6 +23,11 @@ class CategoriesListFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initRecycler()
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
@@ -31,5 +36,10 @@ class CategoriesListFragment : Fragment() {
     companion object {
         @JvmStatic
         fun newInstance() = CategoriesListFragment()
+    }
+
+    private fun initRecycler() {
+        val categoriesAdapter = CategoriesListAdapter(STUB.getCategories())
+        binding.rvCategories.adapter = categoriesAdapter
     }
 }
