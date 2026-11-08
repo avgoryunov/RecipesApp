@@ -13,6 +13,16 @@ import ru.avgoryunov.recipesapp.databinding.ItemCategoryBinding
 class CategoriesListAdapter(private val dataSet: List<Category>) :
     RecyclerView.Adapter<CategoriesListAdapter.ViewHolder>() {
 
+    private var itemClickListener: OnItemClickListener? = null
+
+    interface OnItemClickListener {
+        fun onItemClick()
+    }
+
+    fun setOnItemClickListener(listener: OnItemClickListener) {
+        itemClickListener = listener
+    }
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val binding = ItemCategoryBinding.bind(itemView)
         val imageView: ImageView = binding.ivCategoryImage
@@ -38,15 +48,14 @@ class CategoriesListAdapter(private val dataSet: List<Category>) :
         viewHolder.descriptionTextView.text = category.description
 
         val drawable = try {
-            Drawable.createFromStream(
-                viewHolder.itemView.context.assets.open(category.imageUrl),
-                null
-            )
+            viewHolder.itemView.context.assets.open(category.imageUrl)
+                .use { stream -> Drawable.createFromStream(stream, null) }
         } catch (e: Exception) {
             Log.e("!!!", "Произошла ошибка", e)
             null
         }
         viewHolder.imageView.setImageDrawable(drawable)
+        viewHolder.itemView.setOnClickListener { itemClickListener?.onItemClick() }
     }
 
     override fun getItemCount() = dataSet.size
